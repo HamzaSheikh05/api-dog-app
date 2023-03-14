@@ -13,12 +13,12 @@ export const Home = () => {
     fetchData();
   }, [data]);
   return (
-    <section className="flex flex-col bg-slate-100 dark:bg-dark-bg">
-      <h1 className="font-serif font-semibold text-4xl my-4 md:text-5xl lg:text-6xl">
+    <section className="flex flex-col bg-custom-bg dark:bg-dark-bg">
+      <h1 className="font-serif text-blue-100 font-semibold text-4xl my-4 md:text-5xl lg:text-6xl dark:text-orange-200">
         Siberian Husky Shelter
       </h1>
 
-      <div className="flex justify-around flex-wrap gap-6 m-4">
+      <div className="flex justify-around flex-wrap gap-6 m-4 group">
         {/**Card Container */}
         {data &&
           data.map((value, index) => (
