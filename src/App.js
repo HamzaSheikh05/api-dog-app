@@ -8,9 +8,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <main className="bg-red-300 min-w-full">
+      <main>
         <Routes>
-          <Route path="" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<InvalidRoute />} />
         </Routes>
       </main>
