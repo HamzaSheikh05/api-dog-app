@@ -11,17 +11,19 @@ export const Home = () => {
       setData(json.message);
     }
     fetchData();
-    console.log(data);
-  }, []);
+  }, [data]);
   return (
-    <section className="flex flex-col bg-slate-100">
+    <section className="flex flex-col bg-slate-100 dark:bg-dark-bg">
       <h1 className="font-serif font-semibold text-4xl my-4 md:text-5xl lg:text-6xl">
         Siberian Husky Shelter
       </h1>
 
       <div className="flex justify-around flex-wrap gap-6 m-4">
         {/**Card Container */}
-        {data && data.map((value) => <Card message={value} />)}
+        {data &&
+          data.map((value, index) => (
+            <Card key={index} message={value} index={index} />
+          ))}
         {/**End of Card Container */}
       </div>
     </section>
